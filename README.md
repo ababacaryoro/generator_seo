@@ -1,11 +1,11 @@
 ## Introduction 
-Cette application est une aide à la rédaction de contenu pour un article de blog sur le site de Docaposte. À partir d'un mot clé (un sujet), l'application propose une structure HN pour l'article à rédiger, puis le contenu de l'article, le titre et un résumé.
+Cette application est une aide à la rédaction de contenu pour un article de blog. À partir d'un mot clé (un sujet), l'application propose une structure HN pour l'article à rédiger, puis le contenu de l'article, le titre et un résumé.
 
 ## Fonctionnement global
 
-Cette application permet de générer du contenu pour écrire un article de blog pour Docaposte. Le point de départ est un mot clé ou un sujet. A partir de cela, l'application procède par 6 étapes : 
+Cette application permet de générer du contenu pour écrire un article de blog. Le point de départ est un mot clé ou un sujet. A partir de cela, l'application procède par 6 étapes : 
 
-- Etape 1 : Recherche dans le navigateur les 10 pages sur le sujet les mieux référencés pour récupérer  leur structure HN, leur contenu, les mots clés importants et d'autres informations complémentaires comme les autres questions que peuvent se poser les internautes autour du sujet, l'intention de recherche que peut avoir un internaute sur ce sujet et un listing des pages existantes de Docaposte en lien avec le sujet.
+- Etape 1 : Recherche dans le navigateur les 10 pages sur le sujet les mieux référencés pour récupérer  leur structure HN, leur contenu, les mots clés importants et d'autres informations complémentaires comme les autres questions que peuvent se poser les internautes autour du sujet, l'intention de recherche que peut avoir un internaute sur ce sujet et un listing des pages existantes de notre entreprise en lien avec le sujet.
 
 - Etape 2 : Proposition d'une structure HN de départ. L'application se base sur le mot clé fourni par l'utilisateur et de l'intention de recherche que peut avoir un internaute sur ce sujet pour proposer une première version de structure HN très générale.
 
@@ -41,15 +41,7 @@ La structure de votre projet est la suivante :
 │   │   │   ├── theme-old.css
 │   │   │   └── theme.css
 │   │   └── images
-│   │       ├── CASTOR BLANC (1).svg
-│   │       ├── CASTOR.png
-│   │       ├── CASTOR.svg
-│   │       ├── background_.png
-│   │       ├── castor_blanc.png
-│   │       ├── castor_blanc_old.png
-│   │       ├── doca.png
 │   │       ├── logo.png
-│   │       ├── ov.png
 │   │       └── worflow_appli.png
 │   ├── data
 │   ├── model
@@ -91,8 +83,8 @@ La structure de votre projet est la suivante :
 1. **Cloner le repo** :
 
     ```sh
-    git clone git@ssh.dev.azure.com:v3/DatascienceIA/Castor/AgentSEO
-    cd AgentSEO
+    git clone git@github.com:ababacaryoro/generator_seo.git
+    cd generator_seo
     ```
 
 2. **Gestion des clés d'accès et librairies**
@@ -106,7 +98,7 @@ pour une industrialisation
    ```sh
    export MIXTRAL_API_BASE="VALEUR_A_COMPLETER" # => le lien vers le déploiement de MISTRAL
    export MIXTRAL_API_KEY="VALEUR_A_COMPLETER"  # =>  la clé de la souscription à MISTRAL
-   export GPT_API_KEY="VALEUR_A_COMPLETER"  # =>  la clé d'accès à l'API GPT de Docaposte (https://apigatewayinnovation.azure-api.net/openai-api/deployments/gpt-4o/chat/completions?api-version=2024-02-01)
+   export GPT_API_KEY="VALEUR_A_COMPLETER"  # =>  la clé d'accès à l'API GPT 
    ```
 
 Il faudra également installer les librairies nécessaires pour l'exécution de l'application. Pour cela, commencez par utiliser un environnement virtuel avec la version *3.10.14 de Python*. Ensuite, pour les dépendances, cela peut se faire de 2 manières : avec *poetry* ou avec le fichier *requirements.txt*
@@ -143,12 +135,8 @@ suivante en local : `http://localhost:80`.
 
 # Contributeurs
 
-- [Ababacar BA](mailto:ababacar.ba@docaposte.fr)
-- [Mathieu CASTERAS](mailto:mathieu.casteras@docaposte.fr)
-- [Richard VO](mailto:richard.vo@docaposte.fr)
+- [Ababacar BA](mailto:yoroba93@gmail.com)
 
 
 # Aide
-- [Ababacar BA](mailto:ababacar.ba@docaposte.fr)
-- [Mathieu CASTERAS](mailto:mathieu.casteras@docaposte.fr)
-- [François Fourcade](mailto:francois.fourcade@docaposte.fr)
+- [Ababacar BA](mailto:yoroba93@gmail.com)
