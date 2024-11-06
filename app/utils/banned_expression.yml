@@ -1,0 +1,40 @@
+# This YAML file contains a list of banned expressions pour the LLM : It should avoid to use them
+expressions:
+  - Naviguer
+  - Témoignage
+  - Testament
+  - Dans un contexte
+  - Peut conduire à
+  - Est la clé pour
+  - Plongez dans
+  - Intrigant
+  - Holistique
+  - Permettez-moi
+  - Avis à
+  - Il est important de noter
+  - Essentiel
+  - crucial
+  - impératif
+  - vital
+  - Vibrant
+  - captivant
+  - Orchestrer
+  - Embarquer
+  - Suivez le guide
+  - En conclusion
+  - Labyrinthe
+  - Dans le monde de
+  - Dans un monde de
+  - outil incontournable
+  - suivez ces étapes
+  - Dans le paysage de
+  - A l'ère de
+  - Débloquer
+  - Rigoureux
+  - élégant
+  - unique
+  - En constante évolution
+  - Se débattre
+  - Faire écho
+  - Certainement
+  - en suivant ces étapes

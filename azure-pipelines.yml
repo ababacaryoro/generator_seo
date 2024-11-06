@@ -1,0 +1,69 @@
+trigger:
+  branches:
+    include:
+      - main
+
+resources:
+  - repo: self
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  azureSubscription: 'rg-castor-all-resource-manager'
+  resourceGroupName: 'rg-castor'
+  appName: 'agent-seo'
+  keyVaultName: 'kv-castor'
+  secrets: 'MIXTRAL-API-BASE,MIXTRAL-API-KEY,GPT-API-KEY, OPENAI-API-URL'
+  containerRegistry: 'crcastor.azurecr.io'
+  dockerRegistryServiceConnection: 'e55a9bd3-9247-48c4-b4d7-bceab80bb255'
+  imageRepository: 'agent-seo'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  imageName: 'agent-seo'
+  tag: 'latest'
+  vmImageName: 'ubuntu-latest'
+
+stages:
+  - stage: Build
+    displayName: Build and push stage
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          vmImage: $(vmImageName)
+        steps:
+          - task: AzureKeyVault@2
+            inputs:
+              azureSubscription: 'rg-castor-all-resource-manager'
+              KeyVaultName: $(keyVaultName)
+              SecretsFilter: '$(secrets)'
+              RunAsPreJob: true
+
+          - script: |
+              echo "Cleaning up space..."
+              docker system prune -af
+              sudo apt-get clean
+              sudo rm -rf /var/lib/apt/lists/*
+            displayName: Clean up disk space
+          
+          - task: Docker@2
+            inputs:
+              containerRegistry: $(dockerRegistryServiceConnection)
+              command: login
+
+          - script: |
+              docker build  --build-arg GPT_API_KEY=$(GPT-API-KEY)  --build-arg MIXTRAL_API_BASE=$(MIXTRAL-API-BASE) \
+                --build-arg MIXTRAL_API_KEY=$(MIXTRAL-API-KEY) --build-arg OPENAI_API_URL=$(OPENAI-API-URL) -f $(dockerfilePath) -t $(containerRegistry)/$(imageRepository):$(tag) .
+            displayName: Build Docker Image
+
+          - script: |
+              docker push $(containerRegistry)/$(imageRepository):$(tag)
+            displayName: Push Docker Image to ACR
+
+          - task: AzureWebAppContainer@1
+            displayName: 'Azure Web App on Container Deploy'
+            inputs:
+              azureSubscription: $(azureSubscription)
+              resourceGroupName: $(resourceGroupName)
+              appName: $(appName)
+              containers: $(containerRegistry)/$(imageRepository):$(tag)

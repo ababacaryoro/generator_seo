@@ -1,0 +1,80 @@
+footer {
+  visibility: hidden;
+}
+
+
+
+/* Text side bar and background side bar */
+section[data-testid="stSidebar"]>* {
+  background-color: #2d4965 !important;
+  color: #FFFFFF !important;
+}
+
+/* Label widgets sidebar */
+section[data-testid="stSidebar"] label {
+  color: #FFFFFF !important;
+}
+
+/* Label widgets sidebar */
+section[data-testid="stExpanderHeader"] label {
+  color: #FFFFFF !important;
+}
+
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h1 {
+  color: #2d4965 !important;
+}
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h2 {
+  color: #2d4965 !important;
+}
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h3 {
+  color: #2d4965 !important;
+}
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h4 {
+  color: #2d4965 !important;
+}
+
+span[data-baseweb="tag"] {
+  background-color: #2d4965 !important;
+}
+
+/* Sidebar title */
+section[data-testid="stSelectbox"] h4 {
+  color: #ffffff !important;
+  background-color: #2d4965 !important;
+}
+
+/* button color */
+button {
+  color: #ffe801 !important;
+  background-color: #2d4965 !important;
+}
+
+/* Checkbox background 
+div[class="row-widget stCheckbox"] {
+  color: #FFFFFF !important;
+  background-color: #2d4965 !important;
+  border-radius: 5px;
+} */
+
+/* Slider button */
+/*div[role="slider"] {
+  background-color: #ffe801 !important;
+  border-radius: 5px !important;
+}*/
+
+div.stApp.streamlit-wide header[data-testid="stHeader"] {
+  background-color: transparent;
+}
+
+section[data-testid="stSidebar"] div.stRadio div,
+section[data-testid="stSidebar"] div[data-testid="stSidebarNav"] a span{
+  color: #FFFFFF !important;
+}

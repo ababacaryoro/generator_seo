@@ -1,0 +1,36 @@
+/* Color for the text within the sidebar */
+section[data-testid="stSidebar"] div.stRadio div,
+section[data-testid="stSidebar"] div[data-testid="stSidebarNav"] a span {
+    color: #ffffff !important;
+    background-color: #ffffff; /* Changez la couleur selon vos préférences */
+    border-color: #265495;
+}
+
+/* Text side bar and background side bar */
+section[data-testid="stSidebar"]>* {
+    background-color: #0000FF !important;
+    color: #FFFFFF !important;
+}
+
+input[type=radio] {
+    color: #265495 !important;
+    background-color: #FFCB05 !important;
+}
+
+button {
+    color: #265495 !important;
+    background-color: #FFCB05 !important;
+}
+
+thead{
+    background-color: #e8f2fc;
+    color:#265495
+}
+
+tbody{
+    background-color: #E8F2FC;
+}
+
+td {
+    color: #265495
+}
