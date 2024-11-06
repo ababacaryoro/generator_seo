@@ -215,9 +215,9 @@ def main():
         st.markdown("<br><br>", unsafe_allow_html=True)
 
         with st.columns(3)[1]:
-            st.image("app/assets/images/doca.png", width=100)
+            st.image("app/assets/images/logo.png", width=100)
             # st.markdown("<br><br>", unsafe_allow_html=True)
-            st.image("app/assets/images/castor_blanc.png", width=100)
+            st.image("app/assets/images/logo.png", width=100)
             st.markdown("<br><br>", unsafe_allow_html=True)
 
     # Upload documents
