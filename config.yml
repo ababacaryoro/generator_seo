@@ -1,4 +1,4 @@
-AI_NAME: DocaBot
+AI_NAME: DcBot
 DEPLOYMENTS:
   CHAT_MODEL: gpt4
   EMBEDDING_MODEL: gpt4all
@@ -13,7 +13,7 @@ OPENAI_API_BASE:  https://openai.azure.com/
 OPENAI_API_VERSION: 2024-02-01
 OPENAI_API_TYPE: azure
 OPEN_API_KEY_SECRET: api-key
-OPENAI_API_URL: https://apigatewayinnovation.azure-api.net/openai-api/deployments/gpt-4o/chat/completions?api-version=2024-02-01
+OPENAI_API_URL: https://api.azure-api.net
 TOP_CONCURRENTS: 10
 BLOB_CONNECTION_STRING: ""
 ADD_CHAT_HISTORY: true
