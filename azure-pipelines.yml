@@ -10,13 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  azureSubscription: 'rg-castor-all-resource-manager'
-  resourceGroupName: 'rg-castor'
+  azureSubscription: 'rg-all-resource-manager'
+  resourceGroupName: 'rg-ca'
   appName: 'agent-seo'
-  keyVaultName: 'kv-castor'
+  keyVaultName: 'kv-ca'
   secrets: 'MIXTRAL-API-BASE,MIXTRAL-API-KEY,GPT-API-KEY, OPENAI-API-URL'
   containerRegistry: 'crcastor.azurecr.io'
-  dockerRegistryServiceConnection: 'e55a9bd3-9247-48c4-b4d7-bceab80bb255'
+  dockerRegistryServiceConnection: 'xxaaxxx'
   imageRepository: 'agent-seo'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   imageName: 'agent-seo'
@@ -34,7 +34,7 @@ stages:
         steps:
           - task: AzureKeyVault@2
             inputs:
-              azureSubscription: 'rg-castor-all-resource-manager'
+              azureSubscription: 'rg-ca-all-resource-manager'
               KeyVaultName: $(keyVaultName)
               SecretsFilter: '$(secrets)'
               RunAsPreJob: true
