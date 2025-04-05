@@ -2,7 +2,7 @@
 name = "seo"
 version = "0.1.0"
 description = ""
-authors = ["Ababacar BA <ababacar.ba@openvalue.fr>"]
+authors = ["Ababacar BA <yoroba93@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
